@@ -4,7 +4,7 @@
 
 Why are you interested in this field/domain?
 
-We wanted to explore homelessness in Seattle, since this is our community, and homelessness is a fast rising problem in this city because of rapid gentrification. We believe that this is a crucial issue and should be analyzed more in depth.
+We wanted to explore homelessness in Seattle because this is the community that we live in and affects us directly, and homelessness is a fast rising problem in this city because of the rapid gentrification due to the numerous tech companies moving into Seattle. We believe that this is an extremely crucial issue and should be analyzed more in depth because it will only get worse as class division grows.
 
 What other examples of data driven project have you found related to this domain (share at least 3)?
 
@@ -14,8 +14,8 @@ What other examples of data driven project have you found related to this domain
 
 What data-driven questions do you hope to answer about this domain (share at least 3)?
 
- - What is the primary cause of homelessness in Seattle over the past 10 years?
- - What are the trends in homelessness in Seattle over the past 10 years?
+ - What are the primary causes of homelessness in Seattle over the past 10 years?
+ - How has the percentage of homeless people grown in Seattle over the past 10 years?
  - What are the demographics of the homeless population in Seattle?
 
 ## Questions for Each Dataset
