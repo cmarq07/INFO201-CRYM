@@ -73,11 +73,24 @@ This dataset could help solve a lot of the questions we had, because of how many
 
 
 **Where did you download the data (e.g., a web URL)?**
+https://ourworldindata.org/homelessness
 
 **How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?**
+This specific website has a collection of data on homelessness in various
+countries displayed on its website. I specifically looked at the data for
+the US. According to the website, the US is the Department of Housing and Urban
+Development, releases the Annual Homeless Assessment Report to
+Congress. What they do to present the data is calculate ‘point-in-time’
+estimates by counting homeless people in late January of each year.
 
 **How many observations (rows) are in your data?**
+There is only one column in the data. But this table is unique because at the
+bottom it has a slide for a range of years that changes the data in the
+individual columns.
 
 **How many features (columns) are in the data?**
+There are a total of 8 columns in the data.
 
 **What questions (from above) can be answered using the data in this dataset?**
+- How has homelessness increased throughout a certain range of years
+- How has homelessness decreased throughout a certain range of years
