@@ -94,3 +94,19 @@ There are a total of 8 columns in the data.
 **What questions (from above) can be answered using the data in this dataset?**
 - How has homelessness increased throughout a certain range of years
 - How has homelessness decreased throughout a certain range of years
+
+**Where did you download the data (e.g., a web URL)?**
+https://www.usich.gov/homelessness-statistics/wa
+
+**How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?**
+The website shows a visual representation of the United States of America, showing each state with a color coded key corresponding to a range of how many homeless people (approximately) live there. It's easy to visualize the data since it's laid out in a neat and efficient way with easily accessible information.
+
+**How many observations (rows) are in your data?**
+There aren't really rows in the data, only numbers as it's purely a visual chart.
+
+**How many features (columns) are in the data?**
+There are 11 features, the two main ones being Total Homeless Population and Total Student Homeless population. 
+
+**What questions (from above) can be answered using the data in this dataset?**
+It answers the question of "How has the percentage of homeless people grown in Seattle over the past 10 years?". You can clearly look at this data and extrapolate a percentage growth/decrease in homeless populations within any given U.S state.
+
