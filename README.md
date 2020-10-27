@@ -71,6 +71,7 @@ They include:
 This dataset could help solve a lot of the questions we had, because of how many different tables they have. We could answer questions about the trend of the percentage of homelessness in Seattle, the demographic breakdown of the homeless population, and the causes. There are other questions we could answer, like how long were people homeless for, on average. The only thing that might make it difficult is that not all the columns have data for the same years (some have data from 1998 - 2020, but others only have data from 2017, and some only for one specific year).
 
 
+### _Our World in Data Database_
 
 **Where did you download the data (e.g., a web URL)?**
 https://ourworldindata.org/homelessness
@@ -108,6 +109,8 @@ There are 11 features, the two main ones being Total Homeless Population and Tot
 
 **What questions (from above) can be answered using the data in this dataset?**
 It answers the question of "How has the percentage of homeless people grown in Seattle over the past 10 years?". You can clearly look at this data and extrapolate a percentage growth/decrease in homeless populations within any given U.S state.
+
+### _Seattle Times_
 
 **Where did you download the data (e.g., a web URL)?**
 https://www.seattletimes.com/seattle-news/homeless/new-homeless-count-in-king-county-shows-spike-in-number-of-people-sleeping-outside/
