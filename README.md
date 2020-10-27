@@ -78,8 +78,7 @@ https://ourworldindata.org/homelessness
 **How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?**
 This specific website has a collection of data on homelessness in various
 countries displayed on its website. I specifically looked at the data for
-the US. According to the website, the US is the Department of Housing and Urban
-Development, releases the Annual Homeless Assessment Report to
+the US. According to the website, the US is the Department of Housing and Urban Development, releases the Annual Homeless Assessment Report to
 Congress. What they do to present the data is calculate ‘point-in-time’
 estimates by counting homeless people in late January of each year.
 
@@ -105,8 +104,22 @@ The website shows a visual representation of the United States of America, showi
 There aren't really rows in the data, only numbers as it's purely a visual chart.
 
 **How many features (columns) are in the data?**
-There are 11 features, the two main ones being Total Homeless Population and Total Student Homeless population. 
+There are 11 features, the two main ones being Total Homeless Population and Total Student Homeless population.
 
 **What questions (from above) can be answered using the data in this dataset?**
 It answers the question of "How has the percentage of homeless people grown in Seattle over the past 10 years?". You can clearly look at this data and extrapolate a percentage growth/decrease in homeless populations within any given U.S state.
 
+**Where did you download the data (e.g., a web URL)?**
+https://www.seattletimes.com/seattle-news/homeless/new-homeless-count-in-king-county-shows-spike-in-number-of-people-sleeping-outside/
+
+**How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?**
+The data was collected due to "Count Us In" (now called Point-in-time Count), which is an annual data collection to assess the needs of the homeless population in Seattle.
+
+**How many observations (rows) are in your data?**
+The table has 11 observations of the demographics and identities of the homeless, while the graph has 11 observations being the years of the homeless counts.
+
+**How many features (columns) are in the data?**
+There are 2 features in the data table, the demographic and identity, and the graph has 3 features, the year, number of homeless individuals, and their form of shelter (if any).
+
+**What questions (from above) can be answered using the data in this dataset?**
+This dataset can answer the questions "How has the percentage of homeless people grown in Seattle over the past 10 years?" and "What are the demographics of the homeless population in Seattle?".
