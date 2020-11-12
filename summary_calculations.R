@@ -20,4 +20,13 @@ race_highest_percentage <- race_and_ethnicity %>%
   select(Year, Characteristic, Percent) %>% 
   filter(Percent != "na") %>% 
   filter(Percent == max(Percent))
-  
+
+#region with the highest percentage of homeless for each year in Seattle
+region_highest_pop <- region %>% 
+  group_by(Year) %>% 
+  mutate(Total_Pop = sum(Count)) %>% 
+  mutate(Percentage = Count / Total_Pop * 100) %>% 
+  select(Year, Region, Count, Total_Pop, Percentage) %>% 
+  filter(Count == max(Count))
+
+
