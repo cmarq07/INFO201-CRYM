@@ -30,51 +30,51 @@ race_highest_percentage <- race_and_ethnicity %>%
 #homeless pop in Seattle
 highest_race_2020 <- race_highest_percentage %>% 
   filter(Year == "2020") %>% 
-  pull(Race) 
+  pull(Top_race) 
 
 highest_race_2019 <- race_highest_percentage %>% 
   filter(Year == "2019") %>% 
-  pull(Race) 
+  pull(Top_race) 
 
 highest_race_2018 <- race_highest_percentage %>% 
   filter(Year == "2018") %>% 
-  pull(Race) 
+  pull(Top_race) 
 
 highest_race_2017 <- race_highest_percentage %>% 
   filter(Year == "2017") %>% 
-  pull(Race) 
+  pull(Top_race) 
 
 highest_race_2016 <- race_highest_percentage %>% 
   filter(Year == "2016") %>% 
-  pull(Race) 
+  pull(Top_race) 
 
 highest_race_2015 <- race_highest_percentage %>% 
   filter(Year == "2015") %>% 
-  pull(Race) 
+  pull(Top_race) 
 
 highest_percentage_2020 <- race_highest_percentage %>% 
   filter(Year == "2020") %>% 
-  pull(Percent)
+  pull(Top_race)
 
 highest_percentage_2019 <- race_highest_percentage %>% 
   filter(Year == "2019") %>% 
-  pull(Percent)
+  pull(Race_percent)
 
 highest_percentage_2018 <- race_highest_percentage %>% 
   filter(Year == "2018") %>% 
-  pull(Percent)
+  pull(Race_percent)
 
 highest_percentage_2017 <- race_highest_percentage %>% 
   filter(Year == "2017") %>% 
-  pull(Percent)
+  pull(Race_percent)
 
 highest_percentage_2016 <- race_highest_percentage %>% 
   filter(Year == "2016") %>% 
-  pull(Percent)
+  pull(Race_percent)
 
 highest_percentage_2015 <- race_highest_percentage %>% 
   filter(Year == "2015") %>% 
-  pull(Percent)
+  pull(Race_percent)
 
 #region with the highest percentage of homeless for each year in Seattle
 region_highest_pop <- region %>% 
@@ -88,6 +88,18 @@ region_highest_pop <- region %>%
   rename(Region_total_pop = Total_Pop) %>% 
   rename(Region_percentage = Percentage)
 
+top_region <- region_highest_pop %>% 
+  filter(Year == "2020") %>% 
+  pull(Top_region)
+
+region_percent_2017 <- region_highest_pop %>% 
+  filter(Year == "2017") %>% 
+  pull(Region_percentage)
+
+region_percent_2020 <- region_highest_pop %>% 
+  filter(Year == "2020") %>% 
+  pull(Region_percentage)
+
 #highest duration of homeless for each year in Seattle
 highest_duration <- duration_of_homeless %>% 
   group_by(Year) %>% 
@@ -95,6 +107,11 @@ highest_duration <- duration_of_homeless %>%
   rename(Top_time_period = `Time period`) %>% 
   rename(Time_period_count = Count) %>% 
   rename(Time_period_percent = `Percent `)
+
+highest_duration_by_year <- highest_duration %>% 
+  filter(Year == "2020") %>% 
+  pull(Top_time_period)
+
   
 
 
