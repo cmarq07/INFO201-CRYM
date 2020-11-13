@@ -22,7 +22,58 @@ race_highest_percentage <- race_and_ethnicity %>%
   group_by(Year) %>% 
   select(Year, Characteristic, Percent) %>% 
   filter(Percent != "na") %>% 
-  filter(Percent == max(Percent))
+  filter(Percent == max(Percent)) %>% 
+  rename(Race = Characteristic)
+
+#find the race with the highest homeless pop and its percentage of the total 
+#homeless pop in Seattle
+highest_race_2020 <- race_highest_percentage %>% 
+  filter(Year == "2020") %>% 
+  pull(Race) 
+
+highest_race_2019 <- race_highest_percentage %>% 
+  filter(Year == "2019") %>% 
+  pull(Race) 
+
+highest_race_2018 <- race_highest_percentage %>% 
+  filter(Year == "2018") %>% 
+  pull(Race) 
+
+highest_race_2017 <- race_highest_percentage %>% 
+  filter(Year == "2017") %>% 
+  pull(Race) 
+
+highest_race_2016 <- race_highest_percentage %>% 
+  filter(Year == "2016") %>% 
+  pull(Race) 
+
+highest_race_2015 <- race_highest_percentage %>% 
+  filter(Year == "2015") %>% 
+  pull(Race) 
+
+highest_percentage_2020 <- race_highest_percentage %>% 
+  filter(Year == "2020") %>% 
+  pull(Percent)
+
+highest_percentage_2019 <- race_highest_percentage %>% 
+  filter(Year == "2019") %>% 
+  pull(Percent)
+
+highest_percentage_2018 <- race_highest_percentage %>% 
+  filter(Year == "2018") %>% 
+  pull(Percent)
+
+highest_percentage_2017 <- race_highest_percentage %>% 
+  filter(Year == "2017") %>% 
+  pull(Percent)
+
+highest_percentage_2016 <- race_highest_percentage %>% 
+  filter(Year == "2016") %>% 
+  pull(Percent)
+
+highest_percentage_2015 <- race_highest_percentage %>% 
+  filter(Year == "2015") %>% 
+  pull(Percent)
 
 #region with the highest percentage of homeless for each year in Seattle
 region_highest_pop <- region %>% 
