@@ -23,7 +23,8 @@ race_highest_percentage <- race_and_ethnicity %>%
   select(Year, Characteristic, Percent) %>% 
   filter(Percent != "na") %>% 
   filter(Percent == max(Percent)) %>% 
-  rename(Race = Characteristic)
+  rename(Top_race = Characteristic) %>% 
+  rename(Race_percent = Percent)
 
 #find the race with the highest homeless pop and its percentage of the total 
 #homeless pop in Seattle
@@ -81,6 +82,19 @@ region_highest_pop <- region %>%
   mutate(Total_Pop = sum(Count)) %>% 
   mutate(Percentage = Count / Total_Pop * 100) %>% 
   select(Year, Region, Count, Total_Pop, Percentage) %>% 
-  filter(Count == max(Count))
+  filter(Count == max(Count)) %>% 
+  rename(Top_region = Region) %>% 
+  rename(Region_count = Count) %>% 
+  rename(Region_total_pop = Total_Pop) %>% 
+  rename(Region_percentage = Percentage)
+
+#highest duration of homeless for each year in Seattle
+highest_duration <- duration_of_homeless %>% 
+  group_by(Year) %>% 
+  filter(Count == max(Count)) %>% 
+  rename(Top_time_period = `Time period`) %>% 
+  rename(Time_period_count = Count) %>% 
+  rename(Time_period_percent = `Percent `)
+  
 
 
