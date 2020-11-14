@@ -13,6 +13,9 @@ region <- read_excel("INFO_region.xlsx")
 #data set for duration of homeless pop in Seattle
 duration_of_homeless <- read_excel("INFO_duration_of_homeless.xlsx")
 
+#data set for causes of homeless in Seattle
+cause <- read_excel("INFO_cause.xlsx")
+
 #filtered data set to just race and ethnicity
 race_and_ethnicity <- demographics %>% 
   filter(Demographic == "Race and ethnicity") 
