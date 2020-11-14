@@ -8,13 +8,15 @@ library(dplyr)
 source("scripts/summary_calculations.R")
 source("scripts/table.R")
 source("scripts/chart_one.R")
+source("scripts/chart_two.R")
+source("scripts/chart_three.R")
 ```
 
 This is our report on homelessness in Seattle. We got our data from [here](https://data.world/sasha/count-us-in-report-homelessness-data/workspace/file?filename=Count+Us+In.xlsx). The data was collected by the Regional Homelessness Authority, a legislation approved by the Seattle City Council that oversees the funding, policy, and services for dealing with the homelessness issue throughout the county. They do a yearly count of the homeless population in King County. The data was generated partly by them, and partly by other organizations like the Puget Sound Regional Council and the Seattle King County Coalition on Homelessness. It's a relational database, and it has 13 different tables, all focusing on different topics about homelessness. 
 
 
 
-Here is our table
+**Table**
 
 ``` {r echo = FALSE, results = 'asis'}
 library(knitr)
@@ -30,6 +32,7 @@ demographics of the homeless population. We wanted to see what races made up
 what percentages of the homeless population. More specifically, what specific
 race had the biggest population of homelessness
 
+**Chart 1**
 ``` {r echo = FALSE}
 ggplot(race_stat_2020, aes(x="", y= Percent, fill=Characteristic)) +
   geom_bar(stat="identity", width=1) +
@@ -44,6 +47,44 @@ Another question in relation to Homelessness is how the leading causes have chan
 over the years. From 2017-2020, we looked at what the leading cause of homelessness
 was for each year.
 
+
+**Chart 2**
+``` {r echo = FALSE}
+ggplot() +
+  labs(x = "Year", y = "Count", 
+       title = "Unsheltered Homelessness by Region in King County"
+  ) +
+  geom_line(
+    data = east_line, aes(x = Year, y = Count, color = "red"), size = 1
+  ) +
+  geom_line(
+    data = north_line, aes(x = Year, y = Count, color = "blue"), size = 1
+  ) +
+  geom_line(
+    data = northeast_line, aes(x = Year, y = Count, color = "green"), size = 1
+  ) +
+  geom_line(
+    data = seattle_line, aes(x = Year, y = Count, color = "purple"), size = 1
+  ) +
+  geom_line(
+    data = southeast_line, aes(x = Year, y = Count, color = "yellow"), size = 1
+  ) +
+  geom_line(
+    data = southwest_line, aes(x = Year, y = Count, color = "orange"), size = 1
+  ) +
+  scale_color_discrete(
+    name = "Region",
+    labels = c(
+      "East County", "North County",
+      "Northeast County", "Seattle",
+      "Southeast County", "Southwest County") 
+  )
+```
+_Where does unsheltered homelessness occur the most in King County?_
+This chart shows the unsheltered homeless count by region in King County from 2017-2020. This chart helps to see patterns of how many unsheltered homeless people there have been over the years and how it has changed in each region, as well as how that number of people compares to other regions. It is clear that over the last few years, Seattle is the region that has consistently had the most unsheltered homeless people. It can be seen in the chart that there is a much smaller gap between all of the other regions, with Seattle largely above all the other regions in count.
+
+
+**Chart 3**
 ``` {r echo = FALSE}
 causes_2020_bar_chart
 causes_2019_bar_chart
@@ -54,3 +95,4 @@ In 2020, the leading cause was Lost Jobs.
 In 2019, the leading cause was when an argument with a friend/family member occurred.
 In 2018 and 2017, the leading cause was when friends or family could no longer afford
 to or refused to host.
+
