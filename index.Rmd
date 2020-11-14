@@ -39,3 +39,18 @@ ggplot(race_stat_2020, aes(x="", y= Percent, fill=Characteristic)) +
 ```
 According to the chart, it looks like the biggest race demmographic of homeless
 people is people who identify as White.
+
+Another question in relation to Homelessness is how the leading causes have changed
+over the years. From 2017-2020, we looked at what the leading cause of homelessness
+was for each year.
+
+``` {r echo = FALSE}
+causes_2020_bar_chart
+causes_2019_bar_chart
+causes_2018_bar_chart
+causes_2017_bar_chart
+```
+In 2020, the leading cause was Lost Jobs.
+In 2019, the leading cause was when an argument with a friend/family member occurred.
+In 2018 and 2017, the leading cause was when friends or family could no longer afford
+to or refused to host.
