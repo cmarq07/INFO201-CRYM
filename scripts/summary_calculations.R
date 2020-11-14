@@ -83,23 +83,27 @@ highest_percentage_2015 <- race_highest_percentage %>%
 region_highest_pop <- region %>% 
   group_by(Year) %>% 
   mutate(Total_Pop = sum(Count)) %>% 
-  mutate(Percentage = Count / Total_Pop * 100) %>% 
+  mutate(Percentage = Count / Total_Pop) %>%  
   select(Year, Region, Count, Total_Pop, Percentage) %>% 
   filter(Count == max(Count)) %>% 
   rename(Top_region = Region) %>% 
   rename(Region_count = Count) %>% 
   rename(Region_total_pop = Total_Pop) %>% 
-  rename(Region_percentage = Percentage)
+  rename(Region_percentage = Percentage) 
 
-top_region <- region_highest_pop %>% 
+#round the percentage
+region_highest_pop_rounded <- region_highest_pop %>% 
+  mutate_at("Region_percentage", signif, 2)
+  
+top_region <- region_highest_pop_rounded %>% 
   filter(Year == "2020") %>% 
   pull(Top_region)
 
-region_percent_2017 <- region_highest_pop %>% 
+region_percent_2017 <- region_highest_pop_rounded %>% 
   filter(Year == "2017") %>% 
   pull(Region_percentage)
 
-region_percent_2020 <- region_highest_pop %>% 
+region_percent_2020 <- region_highest_pop_rounded %>% 
   filter(Year == "2020") %>% 
   pull(Region_percentage)
 
