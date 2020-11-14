@@ -416,29 +416,23 @@ summary {
 
 <p>This is our report on homelessness in Seattle. We got our data from <a href="https://data.world/sasha/count-us-in-report-homelessness-data/workspace/file?filename=Count+Us+In.xlsx">here</a>. The data was collected by the Regional Homelessness Authority, a legislation approved by the Seattle City Council that oversees the funding, policy, and services for dealing with the homelessness issue throughout the county. They do a yearly count of the homeless population in King County. The data was generated partly by them, and partly by other organizations like the Puget Sound Regional Council and the Seattle King County Coalition on Homelessness. It’s a relational database, and it has 13 different tables, all focusing on different topics about homelessness.</p>
 <p>Here is our table</p>
-<table>
+<table style="width:100%;">
 <caption>Seattle Homeless Population Information on Race, Region, and Duration</caption>
 <colgroup>
-<col width="2%"></col>
-<col width="9%"></col>
+<col width="3%"></col>
+<col width="16%"></col>
+<col width="8%"></col>
+<col width="7%"></col>
+<col width="8%"></col>
 <col width="10%"></col>
-<col width="9%"></col>
 <col width="11%"></col>
-<col width="5%"></col>
-<col width="4%"></col>
-<col width="5%"></col>
-<col width="7%"></col>
-<col width="8%"></col>
-<col width="7%"></col>
-<col width="9%"></col>
-<col width="8%"></col>
+<col width="10%"></col>
+<col width="12%"></col>
+<col width="11%"></col>
 </colgroup>
 <thead>
 <tr class="header">
 <th align="right">Year</th>
-<th align="left">Homeless population</th>
-<th align="right">King County population</th>
-<th align="left">Percent of population</th>
 <th align="left">Top_race</th>
 <th align="left">Race_percent</th>
 <th align="left">Top_region</th>
@@ -453,69 +447,54 @@ summary {
 <tbody>
 <tr class="odd">
 <td align="right">2020</td>
-<td align="left">11751</td>
-<td align="right">NA</td>
-<td align="left">NA</td>
 <td align="left">White</td>
 <td align="left">0.48</td>
 <td align="left">Seattle</td>
 <td align="right">3738</td>
 <td align="right">5578</td>
-<td align="right">67.01327</td>
+<td align="right">0.67</td>
 <td align="left">1 year or more</td>
 <td align="right">0.64</td>
 <td align="right">7521</td>
 </tr>
 <tr class="even">
 <td align="right">2019</td>
-<td align="left">11199</td>
-<td align="right">2226300</td>
-<td align="left">5.0303193639671204E-3</td>
 <td align="left">White</td>
 <td align="left">0.42</td>
 <td align="left">Seattle</td>
 <td align="right">3558</td>
 <td align="right">5228</td>
-<td align="right">68.05662</td>
+<td align="right">0.68</td>
 <td align="left">1 year or more</td>
 <td align="right">0.61</td>
 <td align="right">6831</td>
 </tr>
 <tr class="odd">
 <td align="right">2018</td>
-<td align="left">12112</td>
-<td align="right">2190200</td>
-<td align="left">5.5300885763857185E-3</td>
 <td align="left">White</td>
 <td align="left">0.48</td>
 <td align="left">Seattle</td>
 <td align="right">4488</td>
 <td align="right">6320</td>
-<td align="right">71.01266</td>
+<td align="right">0.71</td>
 <td align="left">1 year or more</td>
 <td align="right">0.64</td>
 <td align="right">7752</td>
 </tr>
 <tr class="even">
 <td align="right">2017</td>
-<td align="left">11643</td>
-<td align="right">2153700</td>
-<td align="left">5.4060454102242651E-3</td>
 <td align="left">White</td>
 <td align="left">0.45</td>
 <td align="left">Seattle</td>
 <td align="right">3857</td>
 <td align="right">10970</td>
-<td align="right">35.15953</td>
+<td align="right">0.35</td>
 <td align="left">1 year or more</td>
 <td align="right">0.59</td>
 <td align="right">6869</td>
 </tr>
 <tr class="odd">
 <td align="right">2016</td>
-<td align="left">10688</td>
-<td align="right">2105100</td>
-<td align="left">5.0771934824948937E-3</td>
 <td align="left">White</td>
 <td align="left">0.67</td>
 <td align="left">NA</td>
@@ -528,9 +507,6 @@ summary {
 </tr>
 <tr class="even">
 <td align="right">2015</td>
-<td align="left">10047</td>
-<td align="right">2052800</td>
-<td align="left">4.8942907248636014E-3</td>
 <td align="left">Black or African-American</td>
 <td align="left">0.42</td>
 <td align="left">NA</td>
@@ -543,7 +519,7 @@ summary {
 </tr>
 </tbody>
 </table>
-<p>Something interesting we found about this table was that the race / ethnicity with the highest percentage was White except for 2015, which was Black or African-American. The most common duration of being homeless was 1 year or more, which was always above 50% of the total homeless population. The region with the highest homeless population was always Seattle for the last 4 years. Seattle saw a sharp increase from 35.159526 in 2017 to 67.0132664 in 2020.</p>
+<p>Something interesting we found about this table was that the race / ethnicity with the highest percentage was White except for 2015, which was Black or African-American. The most common duration of being homeless was 1 year or more, which was always above 50% of the total homeless population. The region with the highest homeless population was always Seattle for the last 4 years. Seattle saw a sharp increase from 0.35 in 2017 to 0.67 in 2020.</p>
 
 
 

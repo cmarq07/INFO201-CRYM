@@ -17,7 +17,7 @@ Here is our table
 
 ``` {r echo = FALSE, results = 'asis'}
 library(knitr)
-kable(table_3, caption = "Seattle Homeless Population Information on Race, 
+kable(table_2, caption = "Seattle Homeless Population Information on Race, 
 Region, and Duration")
 ```
 
