@@ -5,8 +5,8 @@ output: html_document
 
 ```{r include = FALSE}
 library(dplyr)
-source("scripts/summary_calculations.R")
-source("scripts/table.R")
+source("summary_calculations.R")
+source("table.R")
 ```
 
 This is our report on homelessness in Seattle. We got our data from [here](https://data.world/sasha/count-us-in-report-homelessness-data/workspace/file?filename=Count+Us+In.xlsx). The data was collected by the Regional Homelessness Authority, a legislation approved by the Seattle City Council that oversees the funding, policy, and services for dealing with the homelessness issue throughout the county. They do a yearly count of the homeless population in King County. The data was generated partly by them, and partly by other organizations like the Puget Sound Regional Council and the Seattle King County Coalition on Homelessness. It's a relational database, and it has 13 different tables, all focusing on different topics about homelessness. 
@@ -21,6 +21,6 @@ kable(table_2, caption = "Seattle Homeless Population Information on Race,
 Region, and Duration")
 ```
 
-Something interesting we found about this table was that the race / ethnicity with the highest percentage was `r highest_race_2016` except for 2015, which was `r highest_race_2015`. The most common duration of being homeless was `r highest_duration_by_year`, which was always above 50% of the total homeless population. The region with the highest homeless population was always `r top_region` for the last 4 years. `r top_region` saw a sharp increase from `r region_percent_2017` in 2017 to `r region_percent_2020` in 2020. 
+Something interesting we found about this table was that the race / ethnicity with the highest percentage was `r summary_info$highest_race_2016` except for 2015, which was `r summary_info$highest_race_2015`. The most common duration of being homeless was `r summary_info$highest_duration_by_year`, which was always above 50% of the total homeless population. The region with the highest homeless population was always `r summary_info$top_region` for the last 4 years. `r summary_info$top_region` saw a sharp increase from `r summary_info$region_percent_2017` in 2017 to `r summary_info$region_percent_2020` in 2020. 
 
 

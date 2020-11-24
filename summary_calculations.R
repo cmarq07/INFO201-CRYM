@@ -29,6 +29,33 @@ race_highest_percentage <- race_and_ethnicity %>%
   rename(Top_race = Characteristic) %>% 
   rename(Race_percent = Percent)
 
+
+#region with the highest percentage of homeless for each year in Seattle
+region_highest_pop <- region %>% 
+  group_by(Year) %>% 
+  mutate(Total_Pop = sum(Count)) %>% 
+  mutate(Percentage = Count / Total_Pop) %>%  
+  select(Year, Region, Count, Total_Pop, Percentage) %>% 
+  filter(Count == max(Count)) %>% 
+  rename(Top_region = Region) %>% 
+  rename(Region_count = Count) %>% 
+  rename(Region_total_pop = Total_Pop) %>% 
+  rename(Region_percentage = Percentage) 
+
+#round the percentage
+region_highest_pop_rounded <- region_highest_pop %>% 
+  mutate_at("Region_percentage", signif, 2)
+
+
+#highest duration of homeless for each year in Seattle
+highest_duration <- duration_of_homeless %>% 
+  group_by(Year) %>% 
+  filter(Count == max(Count)) %>% 
+  rename(Top_time_period = Time.period) %>% 
+  rename(Time_period_count = Count) %>% 
+  rename(Time_period_percent = Percent)
+
+
 #summary information list
 summary_info <- list()
 summary_info$highest_race_2020 <- race_highest_percentage %>% 
@@ -81,31 +108,6 @@ summary_info$highest_duration_by_year <- highest_duration %>%
   pull(Top_time_period)
 
 
-
-#region with the highest percentage of homeless for each year in Seattle
-region_highest_pop <- region %>% 
-  group_by(Year) %>% 
-  mutate(Total_Pop = sum(Count)) %>% 
-  mutate(Percentage = Count / Total_Pop) %>%  
-  select(Year, Region, Count, Total_Pop, Percentage) %>% 
-  filter(Count == max(Count)) %>% 
-  rename(Top_region = Region) %>% 
-  rename(Region_count = Count) %>% 
-  rename(Region_total_pop = Total_Pop) %>% 
-  rename(Region_percentage = Percentage) 
-
-#round the percentage
-region_highest_pop_rounded <- region_highest_pop %>% 
-  mutate_at("Region_percentage", signif, 2)
-  
-
-#highest duration of homeless for each year in Seattle
-highest_duration <- duration_of_homeless %>% 
-  group_by(Year) %>% 
-  filter(Count == max(Count)) %>% 
-  rename(Top_time_period = Time.period) %>% 
-  rename(Time_period_count = Count) %>% 
-  rename(Time_period_percent = Percent)
 
 
   
