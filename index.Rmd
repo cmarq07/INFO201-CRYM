@@ -33,7 +33,8 @@ demographics of the homeless population. We wanted to see what races made up
 what percentages of the homeless population. More specifically, what specific
 race had the biggest population of homelessness
 
-**Chart 1**
+## **Chart 1**
+
 ``` {r echo = FALSE}
 ggplot(race_stat_2020, aes(x="", y= Percent, fill=Characteristic)) +
   geom_bar(stat="identity", width=1) +
@@ -41,6 +42,7 @@ ggplot(race_stat_2020, aes(x="", y= Percent, fill=Characteristic)) +
    scale_fill_manual(values = mycols) +
    theme_void()
 ```
+
 According to the chart, it looks like the biggest race demmographic of homeless
 people is people who identify as White.
 
@@ -49,7 +51,8 @@ over the years. From 2017-2020, we looked at what the leading cause of homelessn
 was for each year.
 
 
-**Chart 2**
+## **Chart 2**
+
 ``` {r echo = FALSE}
 ggplot() +
   labs(x = "Year", y = "Count",
@@ -81,17 +84,21 @@ ggplot() +
       "Southeast County", "Southwest County")
   )
 ```
+
 _Where does unsheltered homelessness occur the most in King County?_
+
 This chart shows the unsheltered homeless count by region in King County from 2017-2020. This chart helps to see patterns of how many unsheltered homeless people there have been over the years and how it has changed in each region, as well as how that number of people compares to other regions. It is clear that over the last few years, Seattle is the region that has consistently had the most unsheltered homeless people. It can be seen in the chart that there is a much smaller gap between all of the other regions, with Seattle largely above all the other regions in count.
 
 
-**Chart 3**
+## **Chart 3**
+
 ``` {r echo = FALSE}
 causes_2020_bar_chart
 causes_2019_bar_chart
 causes_2018_bar_chart
 causes_2017_bar_chart
 ```
+
 In 2020, the leading cause was Lost Jobs.
 In 2019, the leading cause was when an argument with a friend/family member occurred.
 In 2018 and 2017, the leading cause was when friends or family could no longer afford
