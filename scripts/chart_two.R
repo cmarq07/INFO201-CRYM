@@ -3,7 +3,7 @@ library(dplyr)
 library(readxl)
 library(ggplot2)
 # load dataset
-region <- read_excel(file.choose("info_region.xlsx"))
+region <- read_excel(file.choose())
 # CREATING A NEW DATAFRAME: There are repeats of rows with the same region for
 # 2017, so here I combined the rows that were in the same region for the year
 # 2017 and made it into a new dataframe
