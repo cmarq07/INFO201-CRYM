@@ -9,3 +9,6 @@ duration <- read.csv("INFO_duration_of_homeless.csv")
 region <- read.csv("INFO_region.csv")
 total <- read.csv("INFO_total.csv")
 
+ui <- navbarPage(
+  
+)
