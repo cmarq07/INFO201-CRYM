@@ -14,7 +14,47 @@ cause_year_choices <- c(unique(cause$Year))
 cause_choices <- c(unique(cause$Cause))
 
 intro_panel <- tabPanel(
-  "Introduction"
+  "Introduction",
+  fluidPage(
+    h1("Homelessness in Washington"),
+    h3("Christian Calloway, My-An Pham, Rachel Wang, Yash Katwal"),
+    br(),
+    # Intro
+    strong("Introduction"),
+    hr(),
+    p("In this project, we will be exploring the state of homelessness 
+      in Washington State. Throughout a series of different data
+      visualizations, we will be exploring a summary of the state
+      of homelessness, along with some different trends in the data.
+      The original data from the", strong(em("Count Us In")),
+      "dataset provided us with a framework to ask questions like
+      ", em("what are the primary causes of homelessness in King County,"),
+      "or,", em("how has the percentage of homeless people grown over
+               the years?"),),
+    br(),
+    
+    # Chart 1
+    strong("Chart One"),
+    hr(),
+    p("Made by", strong("My-An"), ". Enter content here"),
+    br(),
+    
+    # Chart 2
+    strong("Chart Two"),
+    hr(),
+    p("Made by", strong("Christian"), ". Chart 2 is a 
+      heat map/chloropleth map of homelessness throughout WA. 
+      This chart was a bit different in that we had to create our own
+      excel spreadsheet to mutate different columns of data,
+      such as the homeless count in different counties, and
+      the percent of the population."),
+    br(),
+    
+    # Chart 3
+    strong("Chart Three"),
+    hr(),
+    p("Made by", strong("Rachel"), ". Enter content here"),
+  )
 )
 
 chart1_panel <- tabPanel(
@@ -24,8 +64,17 @@ chart1_panel <- tabPanel(
 chart2_panel <- tabPanel(
   "2nd Chart",
   titlePanel("Homelessness Heatmap"),
-  fluidPage(
-    plotOutput("chart2")
+  sidebarLayout(
+    sidebarPanel(
+      selectInput(
+        inputId = "feature_input",
+        label = "Map Feature",
+        choices = c("Count", "Percent of Population")
+      )
+    ),
+    mainPanel(
+      plotOutput("chart2")
+    )
   )
 )
 

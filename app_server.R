@@ -16,6 +16,35 @@ total <- read.csv("INFO_total.csv")
 
 server <- function(input, output) {
   output$chart2 <- renderPlot({
+    # Creating map
+    getFeature <- function(inputName) {
+      if(inputName == "Count") {
+        return(map_data$count)
+      }
+      return(map_data$pop_percent)
+    }
+    getArgs <- function(inputType) {
+      if(inputType == "Count") {
+        return(scale_fill_continuous(
+          breaks = c(0, 5750, 11500),
+          labels = c("0", "5,750", "11,500"),
+          low = "#ffeda0", high = "#f03b20"
+          ))
+      }
+      return(scale_fill_continuous(
+        breaks = c(0, 0.00125, 0.0025, 0.00375, 0.005),
+        labels = c("0%", "0.125%", "0.25%", "0.375%", "0.5%"),
+        low = "#ffeda0", high = "#f03b20"
+      ))
+    }
+    homeless_heatmap <- ggplot(map_data, aes(long, lat, group = group)) +
+      geom_polygon(aes(fill = getFeature(input$feature_input)),
+                   color = "black", size = 0.25) +
+      scale_fill_gradient(low = "#ffeda0", high = "#f03b20") +
+      xlab("Latitude") +
+      ylab("Longitude") +
+      labs(fill = input$feature_input) +
+      getArgs(input$feature_input)
     return(homeless_heatmap)
   })
   output$chart3 <- renderPlotly({
