@@ -53,7 +53,11 @@ intro_panel <- tabPanel(
     # Chart 3
     strong("Chart Three"),
     hr(),
-    p("Made by", strong("Rachel"), ". Enter content here"),
+    p("Made by", strong("Rachel"), ". Chart 3 is a bar chart that explores the
+      different causes of homelessness in Seattle from the years 2017 - 2020.
+      Users can select the year they want (as well as a fun color
+      choice) and view the different causes of homelessness and how common
+      they were."),
   )
 )
 
