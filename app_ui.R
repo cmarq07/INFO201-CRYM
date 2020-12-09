@@ -22,7 +22,11 @@ chart1_panel <- tabPanel(
 )
 
 chart2_panel <- tabPanel(
-  "2nd Chart"
+  "2nd Chart",
+  titlePanel("Homelessness Heatmap"),
+  fluidPage(
+    plotOutput("chart2")
+  )
 )
 
 chart3_panel <- tabPanel(
