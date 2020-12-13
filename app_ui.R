@@ -36,7 +36,10 @@ intro_panel <- tabPanel(
     # Chart 1
     strong("Chart One"),
     hr(),
-    p("Made by", strong("My-An"), ". Enter content here"),
+    p("Made by", strong("My-An"), ". Chart 1 is a line graph that allows
+      the user to view the homeless population total and the King County
+      population total so that they can compare the two and see visual
+      representation of how much of the population is homeless."),
     br(),
     
     # Chart 2
@@ -62,7 +65,20 @@ intro_panel <- tabPanel(
 )
 
 chart1_panel <- tabPanel(
-  "1st Chart"
+  "1st Chart",
+  titlePanel("Total Population per Year"),
+  sidebarLayout(
+    sidebarPanel(
+      total_input <- selectInput(
+        inputId = "total_input",
+        label = "Choose a Total Population to View",
+        choices = c(homeless_population, king_county_population)
+      )
+    ),
+    mainPanel(
+      plotOutput("chart1")
+    )
+  )
 )
 
 chart2_panel <- tabPanel(
@@ -77,7 +93,7 @@ chart2_panel <- tabPanel(
       )
     ),
     mainPanel(
-      plotOutput("chart2")
+      plotlyOutput("chart2")
     )
   )
 )
@@ -117,3 +133,4 @@ ui <- navbarPage(
   chart3_panel,
   conclusion_panel
 )
+

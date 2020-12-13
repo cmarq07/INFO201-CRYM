@@ -15,6 +15,16 @@ region <- read.csv("INFO_region.csv")
 total <- read.csv("INFO_total.csv")
 
 server <- function(input, output) {
+  output$chart1 <- renderPlotly({
+    line_graph <- ggplot(data = total) +
+      labs(x = "Year", y = input$total_input, 
+           title = paste0(input$total_input, "per Year")
+      ) +
+      geom_line(
+        mapping = aes_string(x = "Year", y = input$total_input, color = "blue"), size = 1
+      )
+    ggplotly(line_graph)
+  })
   output$chart2 <- renderPlot({
     # Creating map
     getFeature <- function(inputName) {
