@@ -3,13 +3,6 @@ library(ggplot2)
 library(RColorBrewer)
 library(plotly)
 
-#load datasets
-cause <- read.csv("INFO_cause.csv")
-demographics <- read.csv("INFO_demographics.csv")
-duration <- read.csv("INFO_duration_of_homeless.csv")
-region <- read.csv("INFO_region.csv")
-total <- read.csv("INFO_total.csv")
-
 cause_year_choices <- c(unique(cause$Year))
 cause_choices <- c(unique(cause$Cause))
 
@@ -72,7 +65,7 @@ chart1_panel <- tabPanel(
       total_input <- selectInput(
         inputId = "total_input",
         label = "Choose a Total Population to View",
-        choices = c("Homeless.population", "King.County.population")
+        choices = c("Homeless Population", "King County Population")
       )
     ),
     mainPanel(
