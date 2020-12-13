@@ -72,11 +72,11 @@ chart1_panel <- tabPanel(
       total_input <- selectInput(
         inputId = "total_input",
         label = "Choose a Total Population to View",
-        choices = c(homeless_population, king_county_population)
+        choices = c("Homeless.population", "King.County.population")
       )
     ),
     mainPanel(
-      plotOutput("chart1")
+      plotlyOutput("chart1")
     )
   )
 )
