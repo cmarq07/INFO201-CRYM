@@ -93,7 +93,7 @@ chart2_panel <- tabPanel(
       )
     ),
     mainPanel(
-      plotlyOutput("chart2")
+      plotOutput("chart2")
     )
   )
 )

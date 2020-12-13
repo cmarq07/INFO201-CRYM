@@ -44,12 +44,12 @@ server <- function(input, output) {
           breaks = c(0, 5750, 11500),
           labels = c("0", "5,750", "11,500"),
           low = "#ffeda0", high = "#f03b20"
-          ))
+        ))
       }
       return(scale_fill_continuous(
-        breaks = c(0, 0.00125, 0.0025, 0.00375, 0.005),
-        labels = c("0%", "0.125%", "0.25%", "0.375%", "0.5%"),
-        low = "#ffeda0", high = "#f03b20"
+                                   breaks = c(0, 0.00125, 0.0025, 0.00375, 0.005),
+                                   labels = c("0%", "0.125%", "0.25%", "0.375%", "0.5%"),
+                                   low = "#ffeda0", high = "#f03b20"
       ))
     }
     homeless_heatmap <- ggplot(map_data, aes(long, lat, group = group)) +
