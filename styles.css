@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap');
+h1 {
+  position: relative;
+  height: 524px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://a57.foxnews.com/media2.foxnews.com/BrightCove/694940094001/2019/08/16/931/524/694940094001_6073686425001_6073678664001-vs.jpg?ve=1&tl=1");
+  background-size: cover;
+}
+h1::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: #222831;
+  opacity: 0.80;
+}
+body{
+background-color: #e8e8e8;
+
+
+}
+
+a {
+  position: relative;
+  color: #e8e8e8;
+  font-size: 30px;
+  text-align: center;
+}
+
+img {
+  position: absolute;
+  width: 500px;
+  height: 300px;
+  left: 0;
+}
+
+h3 {
+  text-align: center;
+  font-size: 20px;
+}
+
+h2 {
+font-size: 20px;
+max-width: 75vw;
+color: #000000;
+}
+
+.container {
+  position: relative;
+  margin-top: 50px;
+  width: 500px;
+  height: 300px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #30475eab;
+  transition: background 0.5s ease;
+}
+
+.container:hover .overlay {
+  display: block;
+  background: #30475ee7;
+}
+
+
+.summary {
+  position: absolute;
+  text-align: left;
+  color: white;
+  width: 450px;
+  line-height: 25px;
+  font-size: 17px;
+  font-weight: 300px;
+  z-index: 1;
+  top: 40px;
+  left: 20px;
+  opacity: 0;
+  transition: opacity .35s, top .5s;
+}
+
+.title {
+  position: absolute;
+  width: 500px;
+  left: 0;
+  top: 120px;
+  font-weight: 700;
+  font-size: 30px;
+  text-align: center;
+  color: white;
+  z-index: 1;
+  transition: top .5s, left .5s;
+}
+
+
+.container:hover .title{
+  top: -20px;
+  left: -160px;
+}
+
+.container:hover .summary {
+  opacity: 1;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+}
+
+nav {
+  
+  background-color: #7c7c7c;
+  
+}
